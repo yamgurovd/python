@@ -9,30 +9,17 @@
 Программа должна вывести «YES» или «NO» в соответствии с условием задачи.
 
 Примечание. Треугольник существует, если выполняется неравенство треугольника:
+a+b>c
+a+c>b
+b+c>a
 
-a + b > c
-a + c > b
-b + c > a
+link - https://stepik.org/lesson/265083/step/13?auth=registration&unit=246031
 """
+a = int(input())
+b = int(input())
+c = int(input())
 
-a = abs(int(input("Ввдите целое число а: ")))
-b = abs(int(input("Ввдите целое число b: ")))
-c = abs(int(input("Ввдите целое число c: ")))
-
-if a + b > c:
-    print("YES")
-elif a + c > b:
-    print("YES")
-elif b + c > a:
-    print("YES")
-else:
-    print("NO")
-
-side1 = int(input())
-side2 = int(input())
-side3 = int(input())
-
-if (side1 + side2 > side3) and (side2 + side3 > side1) and (side3 + side1 > side2):
+if a+b>c and a+c>b and b+c>a:
     print("YES")
 else:
     print("NO")
