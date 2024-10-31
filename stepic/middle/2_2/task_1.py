@@ -36,3 +36,4 @@ def get_math(a: int | float,
 
 
 print(get_math(a, b))
+# test
