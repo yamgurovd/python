@@ -13,3 +13,7 @@ https://stepik.org/course/68343/syllabus
 ```angular2html
 https://stepik.org/course/116336/syllabus
 ```
+4. Pandas для Анализа данных
+```angular2html
+https://stepik.org/course/122126/syllabus
+```
