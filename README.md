@@ -17,3 +17,7 @@ https://stepik.org/course/116336/syllabus
 ```angular2html
 https://stepik.org/course/122126/syllabus
 ```
+5. SQL с нуля до PRO
+```angular2html
+https://stepik.org/course/61247/syllabus
+```
