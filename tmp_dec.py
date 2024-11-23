@@ -52,3 +52,19 @@ bye_func = outer_function('До свидания!')
 
 hi_func()  # Выведет 'Привет!'
 bye_func()  # Выведет 'До свидания!'
+
+
+# Пример декоратора, взято из гигачата
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Перед вызовом функции")
+        result = func(*args, **kwargs)
+        print("После вызова функции")
+        return result
+    return wrapper
+
+@my_decorator
+def greet(name):
+    print(f"Привет, {name}!")
+
+greet("Иван")
