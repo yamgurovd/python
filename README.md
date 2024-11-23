@@ -1,6 +1,6 @@
 # python
 ## Краткое описание 
-Прохождение разных курсов по питону 
+Прохождение разных курсов по Python и SQL 
 1. "Поколение Python": курс для начинающих
 ```angular2html
 https://stepik.org/course/58852/syllabus
