@@ -97,6 +97,7 @@ print(None <= False)
 
 """приводит к ошибке: TypeError: '>' not supported between instances of 'NoneType' and 'int' ('bool')"""
 
+
 """Примечания
 Примечание 1. Обратите внимание, что функции, не возвращающие значений, на самом деле, в Python возвращают значение None:"""
 
