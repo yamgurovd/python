@@ -54,3 +54,14 @@ res = 0
 for num in numbers:
     res += (num % 2 == 1) and (num > 1)
 print(res)
+
+
+list1 = [[0, [9, 2]], [1, [4, 6, 3], [5, 2, 3], 8, 3]]
+
+print(list1[1][2][1])
+
+text, lst2  = input().strip(), []
+
+for i in range(len(list1)):
+    lst2.append([text[i:i+3]])
+print(lst2)
