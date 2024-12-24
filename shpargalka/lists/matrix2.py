@@ -102,3 +102,27 @@ print(f"Сумма элементов верхней четверти: {sum_uppe
 print(f"Сумма элементов правой четверти: {sum_right}")
 print(f"Сумма элементов нижней четверти: {sum_lower}")
 print(f"Сумма элементов левой четверти: {sum_left}")
+
+# Выполнение разных операций над матрицами
+# Второй способ решения задачи - взято из форума
+m, n = int(input()), int(input())
+mult = [[i * j for i in range(n)] for j in range(m)]
+
+for i in range(m):
+    for j in range(n):
+        print(str(mult[i][j]).ljust(3), end=' ')
+    print()
+
+# Еще один способ формирования матрицы
+n, m = int(input()), int(input())
+
+mult = [[0] * m for _ in range(n)]
+
+for i in range(n):
+    for j in range(m):
+        mult[i][j] = i * j
+
+for row in mult:
+    for value in row:
+        print(str(value).ljust(3), end=" ")
+    print()
