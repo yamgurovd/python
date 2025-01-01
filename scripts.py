@@ -66,5 +66,7 @@ from src.randomizers import randomizer_person
 #     lst2.append([text[i:i+3]])
 # print(lst2)
 
+n, m = int(input()), int(input())
+mtx = [[i*2 for i in range(n)] for j in range(m)]
 
-
+print(*mtx, sep='\n')

@@ -126,3 +126,16 @@ for row in mult:
     for value in row:
         print(str(value).ljust(3), end=" ")
     print()
+
+# Формирование главной и побочной диагонали
+n, mtx = int(input()), []
+
+for i in range(n):
+    row = [int(i) for i in input().split()]
+    mtx.append(row)
+
+for i in range(n):
+    mtx[i][i], mtx[n - i - 1][i] = mtx[n - i - 1][i], mtx[i][i]
+
+for i in range(n):
+    print(*mtx[i])
