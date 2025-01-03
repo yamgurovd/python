@@ -139,3 +139,23 @@ for i in range(n):
 
 for i in range(n):
     print(*mtx[i])
+
+# Формирование матрицы размерностью n на m
+# Ввод натуральных чисел n и m
+n, m = map(int, input().split())
+
+# Создание матрицы размером n x m
+matrix = []
+
+# Заполнение матрицы числами от 1 до n*m
+count = 1
+for i in range(n):
+    row = []
+    for j in range(m):
+        row.append(count)
+        count += 1
+    matrix.append(row)
+
+# Вывод матрицы с форматированием
+for row in matrix:
+    print("".join(str(el).ljust(3) for el in row))
