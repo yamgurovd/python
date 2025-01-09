@@ -1,15 +1,14 @@
 """Первый способ создания матрицы"""
 n, m, l = int(input()), int(input()), []
-#
-#
-# for i in range(n):
-#     row = []
-#     for j in range(m):
-#         el = input()
-#         row.append(el)
-#     l.append(row)
-#
-# print(*l, sep='\n')
+
+for i in range(n):
+    row = []
+    for j in range(m):
+        el = input()
+        row.append(el)
+    l.append(row)
+
+print(*l, sep='\n')
 
 """Второй способ создания матрицы"""
 lst = [[i for i in range(n)] for j in range(m)]
@@ -140,7 +139,7 @@ for i in range(n):
 for i in range(n):
     print(*mtx[i])
 
-# Формирование матрицы размерностью n на m
+# Формирование матрицы размерностью n на m и вывод строкам
 # Ввод натуральных чисел n и m
 n, m = map(int, input().split())
 
@@ -157,5 +156,40 @@ for i in range(n):
     matrix.append(row)
 
 # Вывод матрицы с форматированием
+for row in matrix:
+    print("".join(str(el).ljust(3) for el in row))
+
+# Формирование матрицы размерностью n на m и вывод столбцам
+# Считываем количество строк n и столбцов m
+n, m = map(int, input().split())
+
+# Инициализируем пустую матрицу
+mtx = [[0] * m for _ in range(n)]
+
+# Заполняем матрицу по столбцам
+count = 1
+for j in range(m):
+    for i in range(n):
+        mtx[i][j] = count
+        count += 1
+
+# Выводим матрицу
+for row in mtx:
+    print(" ".join(str(el).ljust(2) for el in row))
+
+# ВТорой вариант решения задачи - взято из форума
+n, m = map(int, input().split())
+matrix = [list(range(i + 1, n * m + 1, n)) for i in range(n)]
+
+[print(*row) for row in matrix]
+
+# Формирование значений измененных по главной и побочной диагонали размерностью nxn
+n = int(input())
+matrix = [[0] * n for _ in range(n)]
+
+for i in range(n):
+    matrix[i][i] = 1
+    matrix[i][n - 1 - i] = 1
+
 for row in matrix:
     print("".join(str(el).ljust(3) for el in row))
