@@ -193,3 +193,23 @@ for i in range(n):
 
 for row in matrix:
     print("".join(str(el).ljust(3) for el in row))
+
+# Формирование матрицы nxm как змейка
+n, m = map(int, input().split())
+matrix = [[0] * m for _ in range(n)]
+
+num = 1
+
+for i in range(n):
+
+    if i % 2 == 0:
+        for j in range(m):
+            matrix[i][j] = num
+            num += 1
+    else:
+        for j in range(m - 1, -1, -1):
+            matrix[i][j] = num
+            num += 1
+
+for row in matrix:
+    print("".join(str(el).ljust(3) for el in row))
